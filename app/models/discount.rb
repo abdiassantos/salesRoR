@@ -1,3 +1,5 @@
 class Discount < ApplicationRecord
+    enum kind: [:porcent, :money]
     enum status: [:active, :inactive]
-  end
+	has_many :sales  
+end
