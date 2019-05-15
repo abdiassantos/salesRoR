@@ -1,5 +1,13 @@
 RailsAdmin.config do |config|
 
+	config.main_app_name = ["Representantes Comerciais", ""]
+	
+	config.navigation_static_links = {
+  	'Portfólio Abdias Santos' => 'https://abdiassantos.com'
+	}
+
+	config.navigation_static_label = "Links Úteis"
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -25,6 +33,9 @@ RailsAdmin.config do |config|
 
 
   config.model Sale do
+
+		navigation_icon 'fa fa-money'
+
     create do
       field  :client
       field  :sale_date
